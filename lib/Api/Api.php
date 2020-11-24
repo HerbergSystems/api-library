@@ -341,6 +341,9 @@ class Api implements LoggerAwareInterface
         if (isset($headers['Mautic-Version'])) {
             return $headers['Mautic-Version'];
         }
+        if (isset($headers['mautic-version'])) {
+            return $headers['mautic-version'];
+        }
 
         return null;
     }
